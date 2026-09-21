@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Grade Relay"
+  short_description: "Route Codex work by risk and evidence"
+  default_prompt: "Use $research-grade-relay to route this task to the smallest adequate Codex model and preserve required review gates."
+
+policy:
+  allow_implicit_invocation: true

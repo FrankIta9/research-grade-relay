@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "adoption_eligible": false,
+  "reason": "Pilot v1 rolled back on 2026-07-13; v2 candidate unvalidated. Requires new preregistration, full conformance, nine role smoke tests, and a counterbalanced paired pilot before adoption.",
+  "evidence_required": [
+    "preregistered conformance run at full coverage passing",
+    "nine custom roles capability-verified",
+    "counterbalanced paired pilot (quality, rework, latency, scientific validity)",
+    "independent recheck review with no open Critical/Important findings"
+  ],
+  "date": "2026-07-13"
+}

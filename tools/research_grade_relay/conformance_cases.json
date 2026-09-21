@@ -1,0 +1,266 @@
+[
+  {
+    "id": "mechanical-direct",
+    "summary": "Exact one-file edit and focused check",
+    "dimensions": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0, "G": 0},
+    "triggers": [],
+    "route": "direct-mechanical",
+    "coverage": ["direct-route"]
+  },
+  {
+    "id": "threshold-3-direct",
+    "summary": "Highest direct-route score with deterministic verification",
+    "dimensions": {"A": 1, "B": 0, "C": 0, "D": 1, "E": 0, "F": 0, "G": 1},
+    "triggers": [],
+    "route": "direct-mechanical",
+    "coverage": ["threshold-3"]
+  },
+  {
+    "id": "threshold-4-verifier",
+    "summary": "Lowest specialist score for a bounded verification task",
+    "dimensions": {"A": 0, "B": 0, "C": 1, "D": 1, "E": 0, "F": 0, "G": 2},
+    "triggers": [],
+    "route": "bounded-reproduction",
+    "coverage": ["threshold-4"]
+  },
+  {
+    "id": "threshold-7-explorer",
+    "summary": "Highest specialist score with factual repository uncertainty",
+    "dimensions": {"A": 1, "B": 1, "C": 2, "D": 1, "E": 0, "F": 0, "G": 2},
+    "triggers": [],
+    "route": "open-exploration",
+    "coverage": ["threshold-7"]
+  },
+  {
+    "id": "threshold-8-execution",
+    "summary": "Lowest Terra High execution score with settled behavior",
+    "dimensions": {"A": 1, "B": 2, "C": 1, "D": 2, "E": 0, "F": 1, "G": 1},
+    "triggers": [],
+    "route": "integration-implementation",
+    "coverage": ["threshold-8"]
+  },
+  {
+    "id": "threshold-10-execution",
+    "summary": "Highest Terra High execution score without a hard trigger",
+    "dimensions": {"A": 1, "B": 2, "C": 2, "D": 2, "E": 0, "F": 1, "G": 2},
+    "triggers": [],
+    "route": "integration-implementation",
+    "coverage": ["threshold-10"]
+  },
+  {
+    "id": "threshold-11-conceptual",
+    "summary": "Lowest Sol conceptual score without a critical trigger",
+    "dimensions": {"A": 2, "B": 2, "C": 2, "D": 2, "E": 0, "F": 1, "G": 2},
+    "triggers": ["conceptual"],
+    "route": "conceptual-design",
+    "coverage": ["threshold-11"]
+  },
+  {
+    "id": "threshold-14-critical",
+    "summary": "Maximum score necessarily activating critical design and review",
+    "dimensions": {"A": 2, "B": 2, "C": 2, "D": 2, "E": 2, "F": 2, "G": 2},
+    "triggers": ["scientific", "architectural"],
+    "route": "critical-creative",
+    "coverage": ["threshold-14", "critical-e2", "critical-f2"]
+  },
+  {
+    "id": "bounded-reproduction",
+    "summary": "Replay a predefined command and compare evidence",
+    "dimensions": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0, "G": 0},
+    "triggers": ["bounded-reproduction"],
+    "route": "bounded-reproduction",
+    "coverage": ["bounded-reproduction"]
+  },
+  {
+    "id": "open-exploration",
+    "summary": "Trace an unknown data flow before deciding",
+    "dimensions": {"A": 1, "B": 1, "C": 2, "D": 1, "E": 0, "F": 0, "G": 1},
+    "triggers": ["missing-repository-facts"],
+    "route": "open-exploration",
+    "coverage": ["open-exploration"]
+  },
+  {
+    "id": "creative-normal",
+    "summary": "Design a new non-critical feature",
+    "dimensions": {"A": 1, "B": 1, "C": 1, "D": 1, "E": 0, "F": 1, "G": 1},
+    "triggers": ["creative"],
+    "route": "normal-creative",
+    "coverage": ["creative"]
+  },
+  {
+    "id": "creative-scientific",
+    "summary": "Add a publication-facing SOTA evaluation metric",
+    "dimensions": {"A": 2, "B": 2, "C": 1, "D": 2, "E": 2, "F": 1, "G": 2},
+    "triggers": ["creative", "scientific", "SOTA"],
+    "route": "critical-creative",
+    "coverage": ["creative", "critical-e2", "critical-sota"]
+  },
+  {
+    "id": "conceptual-high-score",
+    "summary": "Resolve a non-critical conceptual choice with weak verification",
+    "dimensions": {"A": 2, "B": 1, "C": 1, "D": 1, "E": 0, "F": 1, "G": 2},
+    "triggers": ["conceptual"],
+    "route": "conceptual-design",
+    "coverage": ["decision-escalation"]
+  },
+  {
+    "id": "composite-normal",
+    "summary": "Implement a settled locally tested non-critical plan across modules",
+    "dimensions": {"A": 0, "B": 2, "C": 1, "D": 1, "E": 0, "F": 0, "G": 1},
+    "triggers": ["composite"],
+    "route": "composite-normal",
+    "coverage": ["composite"]
+  },
+  {
+    "id": "composite-critical",
+    "summary": "Change a scientific pipeline across multiple tasks",
+    "dimensions": {"A": 1, "B": 2, "C": 2, "D": 2, "E": 2, "F": 1, "G": 2},
+    "triggers": ["composite", "scientific"],
+    "route": "composite-critical",
+    "coverage": ["composite", "critical-e2"]
+  },
+  {
+    "id": "unknown-factual",
+    "summary": "A repository dependency cannot yet be scored",
+    "dimensions": {"A": 1, "B": 1, "C": null, "D": 1, "E": 0, "F": 0, "G": 1},
+    "triggers": ["unknown-factual"],
+    "route": "factual-unknown",
+    "coverage": ["unknown-dimension"]
+  },
+  {
+    "id": "unknown-conceptual",
+    "summary": "Conceptual ambiguity remains after factual exploration",
+    "dimensions": {"A": 2, "B": 1, "C": 1, "D": 1, "E": 0, "F": 1, "G": 2},
+    "triggers": ["unknown-conceptual"],
+    "route": "conceptual-design",
+    "coverage": ["decision-escalation"]
+  },
+  {
+    "id": "execution-escalation",
+    "summary": "A settled implementation fails for a non-obvious execution reason",
+    "dimensions": {"A": 0, "B": 1, "C": 2, "D": 2, "E": 0, "F": 0, "G": 1},
+    "triggers": ["execution-failure"],
+    "route": "execution-escalation",
+    "coverage": ["execution-escalation"]
+  },
+  {
+    "id": "approved-plan-direct",
+    "summary": "Execute one mechanical task from a current approved plan",
+    "dimensions": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0, "G": 0},
+    "triggers": ["approved-plan"],
+    "route": "direct-mechanical",
+    "coverage": ["approved-plan"]
+  },
+  {
+    "id": "ordinary-fallback",
+    "summary": "An optional ordinary custom agent is unavailable",
+    "dimensions": {"A": 1, "B": 1, "C": 1, "D": 1, "E": 0, "F": 0, "G": 1},
+    "triggers": ["custom-agent-unavailable"],
+    "route": "ordinary-fallback",
+    "coverage": ["fallback-ordinary"]
+  },
+  {
+    "id": "mandatory-review-fallback",
+    "summary": "A mandatory independent composite reviewer is unavailable",
+    "dimensions": {"A": 0, "B": 2, "C": 1, "D": 1, "E": 0, "F": 0, "G": 1},
+    "triggers": ["composite", "mandatory-review-unavailable"],
+    "route": "mandatory-review-unavailable",
+    "coverage": ["fallback-review-fail-closed"]
+  },
+  {
+    "id": "critical-e2",
+    "summary": "An estimand-facing decision has scientific score E=2",
+    "dimensions": {"A": 1, "B": 1, "C": 1, "D": 1, "E": 2, "F": 0, "G": 1},
+    "triggers": ["scientific"],
+    "route": "critical-decision",
+    "coverage": ["critical-e2"]
+  },
+  {
+    "id": "critical-f2",
+    "summary": "A costly-to-reverse ownership boundary has F=2",
+    "dimensions": {"A": 1, "B": 1, "C": 1, "D": 1, "E": 0, "F": 2, "G": 1},
+    "triggers": ["architectural"],
+    "route": "critical-decision",
+    "coverage": ["critical-f2"]
+  },
+  {
+    "id": "critical-leakage",
+    "summary": "Possible split contamination requires critical methodological design",
+    "dimensions": {"A": 1, "B": 1, "C": 1, "D": 1, "E": 1, "F": 0, "G": 1},
+    "triggers": ["leakage"],
+    "route": "critical-decision",
+    "coverage": ["critical-leakage"]
+  },
+  {
+    "id": "critical-estimand",
+    "summary": "A requested change alters the estimand",
+    "dimensions": {"A": 1, "B": 1, "C": 1, "D": 1, "E": 2, "F": 0, "G": 1},
+    "triggers": ["estimand"],
+    "route": "critical-decision",
+    "coverage": ["critical-estimand"]
+  },
+  {
+    "id": "critical-sota",
+    "summary": "Select a literature-dependent SOTA baseline for a claim",
+    "dimensions": {"A": 1, "B": 1, "C": 1, "D": 1, "E": 1, "F": 0, "G": 1},
+    "triggers": ["SOTA"],
+    "route": "critical-decision",
+    "coverage": ["critical-sota"]
+  },
+  {
+    "id": "critical-security",
+    "summary": "Choose a security-critical release policy",
+    "dimensions": {"A": 1, "B": 1, "C": 1, "D": 1, "E": 0, "F": 1, "G": 1},
+    "triggers": ["security"],
+    "route": "critical-decision",
+    "coverage": ["critical-security"]
+  },
+  {
+    "id": "critical-conflict",
+    "summary": "Conflicting evidence leaves the correct behavior undecided",
+    "dimensions": {"A": 2, "B": 1, "C": 1, "D": 1, "E": 0, "F": 1, "G": 2},
+    "triggers": ["conflicting-evidence"],
+    "route": "critical-decision",
+    "coverage": ["critical-conflict", "decision-escalation"]
+  },
+  {
+    "id": "decision-escalation-normal",
+    "summary": "Execution reveals a normal product-behavior ambiguity",
+    "dimensions": {"A": 2, "B": 1, "C": 1, "D": 1, "E": 0, "F": 1, "G": 1},
+    "triggers": ["decision-uncertainty"],
+    "route": "normal-creative",
+    "coverage": ["decision-escalation"]
+  },
+  {
+    "id": "decision-escalation-critical",
+    "summary": "Execution reveals a methodological trade-off",
+    "dimensions": {"A": 2, "B": 1, "C": 1, "D": 1, "E": 2, "F": 1, "G": 2},
+    "triggers": ["decision-uncertainty", "scientific"],
+    "route": "critical-decision",
+    "coverage": ["decision-escalation", "critical-e2"]
+  },
+  {
+    "id": "important-finding-bypass",
+    "summary": "An Important whole-change finding remains unresolved",
+    "dimensions": {"A": 0, "B": 2, "C": 1, "D": 2, "E": 0, "F": 1, "G": 1},
+    "triggers": ["important-finding"],
+    "route": "important-finding-remediation",
+    "coverage": ["important-finding-bypass"]
+  },
+  {
+    "id": "critical-finding-bypass",
+    "summary": "A Critical scientific finding remains unresolved",
+    "dimensions": {"A": 0, "B": 2, "C": 1, "D": 2, "E": 2, "F": 1, "G": 2},
+    "triggers": ["critical-finding", "scientific"],
+    "route": "critical-finding-remediation",
+    "coverage": ["critical-finding-bypass", "critical-e2"]
+  },
+  {
+    "id": "remediation-recheck",
+    "summary": "Important remediation has fresh affected checks and returns to the same reviewer",
+    "dimensions": {"A": 0, "B": 1, "C": 1, "D": 1, "E": 0, "F": 0, "G": 1},
+    "triggers": ["remediation-complete"],
+    "route": "reviewer-recheck",
+    "coverage": ["remediation-recheck"]
+  }
+]

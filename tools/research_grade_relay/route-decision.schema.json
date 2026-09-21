@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "classification",
+    "dimensions",
+    "triggers",
+    "roles",
+    "gate",
+    "rationale"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "classification": {"type": "string"},
+    "dimensions": {
+      "type": "object",
+      "required": ["A", "B", "C", "D", "E", "F", "G"],
+      "additionalProperties": false,
+      "properties": {
+        "A": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+        "B": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+        "C": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+        "D": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+        "E": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+        "F": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+        "G": {"type": ["integer", "null"], "minimum": 0, "maximum": 2}
+      }
+    },
+    "triggers": {"type": "array", "items": {"type": "string"}},
+    "roles": {"type": "array", "items": {"type": "string"}},
+    "gate": {"type": "string"},
+    "rationale": {"type": "string"}
+  }
+}
